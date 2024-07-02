@@ -1,0 +1,353 @@
+// Import Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Bai+Jamjuree:200,regular,500,600,700&display=swap&subset=cyrillic-ext")
+
+// Global SCSS-files imports
+@import "./94.reset"
+@import "./95.fonts"
+@import "./96.vars"
+
+@import "./97.mixin"
+@import "./98.components"
+@import "./99.global"
+
+// Sections or Pages SCSS-files imports
+@import "./01.header"
+
+@import "./93.footer"
+
+// Libs
+
+/*=============== myhome ===============*/
+
+.myhome
+  @include adaptivPadding($pcSize: 40, $mobSize: 10,$mode: 1)
+  @include adaptivPadding($pcSize: 150, $mobSize: 80,$mode: 3)
+  overflow: hidden
+
+.myhome__wrap
+  display: flex
+  align-items: flex-start
+  gap: 20px
+  @media (max-width: $breakpoint-sm)
+    flex-direction: column-reverse
+
+.myhome__left
+  flex: 0 1 572px
+  @media (max-width: $breakpoint-sm)
+    flex: none
+.myhome__title
+  font-size: var(--text-h1)
+
+  letter-spacing: -0.01em
+  margin-bottom: 24px
+.myhome__subtitle
+  margin-bottom: 32px
+
+.myhome__btn-wrap
+  display: flex
+
+  gap: 5px
+
+.myhome__right
+  position: relative
+  width: 38%
+  margin-left: auto
+  @media (max-width: $breakpoint-sm)
+    width: 100%
+
+.myhome__image-absolute
+  position: absolute
+  left: -6px
+  top: 0
+  @media (max-width: $breakpoint-sm)
+    width: 350px
+
+.myhome__image-wrap
+  img
+    height: 300px
+
+.myhome-swiper
+  transform: translateY(30px)
+  @media (max-width: $breakpoint-sm)
+    transform: translateY(0px)
+  .myhome__swiper-slide
+    padding: 20px 0
+    display: flex
+    justify-content: center
+  .swiper-button-next,
+  .swiper-button-prev
+    color: #fff
+    position: absolute
+    top: 50%
+    margin-top: -17.5px
+    z-index: 10
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    // @media (max-width: $breakpoint-sm)
+    //   display: none
+
+    &:after
+      display: none
+
+  .swiper-button-prev
+    left: 10px
+  .swiper-button-next
+    right: 10px
+    transform: rotate(180deg)
+
+._anim-items.myhome__title
+  transform: translate(-120%, 0px)
+
+._anim-items.myhome__title._active
+  transform: translate(0px, 0px)
+
+._anim-items.myhome__subtitle
+  transform: translate(-120%, 0px)
+  transition: all 0.8s ease 0.3s
+
+._anim-items.myhome__subtitle._active
+  transform: translate(0px, 0px)
+
+._anim-items.myhome__image-wrap
+  transform: translate(120%, 0px)
+  transition: all 0.8s ease 0.3s
+
+._anim-items.myhome__image-wrap._active
+  transform: translate(0px, 0px)
+
+/*=============== ourproduct ===============*/
+
+.ourproduct
+  @include adaptivPadding($pcSize: 140, $mobSize: 80, $mode: 3)
+
+  &__header
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 20px
+.ourproduct-swiper
+  .ourproduct__swiper-slide
+    display: flex
+    justify-content: center
+
+.ourproduct__card-wrap
+  width: 100%
+
+.ourproduct__img-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 1px solid #fff
+  border-radius: 12px
+  height: 332px
+  width: 100%
+  img
+    max-width: 100%
+    max-height: 100%
+
+.ourproduct__name
+  font-size: 24px
+  line-height: 140%
+  letter-spacing: -0.01em
+  color: #fff
+  text-align: center
+  margin-top: 20px
+.ourproduct__btn-wrap
+  display: flex
+  gap: 54px
+  justify-content: center
+  border-radius: 20px
+  border: 1px solid #fff
+  margin-left: auto
+  width: 155px
+  height: 45px
+  margin-bottom: 20px
+  @media (max-width: $breakpoint-sm)
+    display: none
+  .swiper-button-next,
+  .swiper-button-prev
+    margin-top: 8px
+    z-index: 10
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:hover
+      svg
+        path
+          stroke: black
+
+/*=============== aboutus ===============*/
+
+.aboutus
+  @include adaptivPadding($pcSize: 53, $mobSize: 20, $mode: 1)
+  @include adaptivPadding($pcSize: 50, $mobSize: 20, $mode: 3)
+  background: #dadada
+  border-radius: 20px
+  &__header-wrap
+    display: flex
+    gap: 15px
+
+  &__header
+    @include adaptivPadding($pcSize: 40, $mobSize: 20, $mode: 3)
+    color: #333
+
+.aboutus
+  overflow: hidden
+
+.aboutus__wrap
+  display: flex
+  align-items: flex-start
+  gap: 20px
+  flex-direction: row-reverse
+  @media (max-width: $breakpoint-lg)
+    flex-direction: column-reverse
+
+.aboutus__left
+  flex: 0 1 572px
+  @media (max-width: $breakpoint-lg)
+    flex: none
+.aboutus__subtitle
+  line-height: 22px
+  line-height: 140%
+  letter-spacing: -0.01em
+  color: #333
+  @include adaptivPadding($pcSize: 40, $mobSize: 20, $mode: 3)
+.aboutus__subtitle-two
+  line-height: 22px
+  line-height: 140%
+  letter-spacing: -0.01em
+  color: #333
+
+.aboutus__right
+  display: flex
+  justify-content: center
+  margin: 0 auto
+.aboutus__image-wrap
+  max-width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  img
+    max-width: 100%
+    height: auto
+    object-fit: contain
+
+._anim-items.aboutus__title
+  transform: translate(120%, 0px)
+
+._anim-items.aboutus__title._active
+  transform: translate(0px, 0px)
+
+._anim-items.aboutus__subtitle
+  transform: translate(120%, 0px)
+  transition: all 0.8s ease 0.3s
+
+._anim-items.aboutus__subtitle._active
+  transform: translate(0px, 0px)
+
+._anim-items.aboutus__image-wrap
+  transform: translate(-120%, 0px)
+  transition: all 0.8s ease 0.3s
+
+._anim-items.aboutus__image-wrap._active
+  transform: translate(0px, 0px)
+
+/*=============== variant ===============*/
+
+.variant
+  @include adaptivPadding($pcSize: 100, $mobSize: 80,$mode: 1)
+  @include adaptivPadding($pcSize: 150, $mobSize: 80,$mode: 3)
+
+.variant-swiper
+  .variant__swiper-slide
+    padding: 20px 0
+    display: flex
+    justify-content: center
+
+.variant__card-wrap
+  width: 100%
+
+.variant__img-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 1px solid #fff
+  border-radius: 12px
+  height: 332px
+  width: 100%
+  background: #dadada
+  img
+    max-width: 100%
+    max-height: 100%
+
+.variant__name
+  font-size: 24px
+  line-height: 140%
+  letter-spacing: -0.01em
+  color: #fff
+  text-align: center
+  text-transform: uppercase
+  margin-top: 20px
+/*=============== whywe ===============*/
+
+.modify-reverse
+  flex-direction: row-reverse
+  @media (max-width: $breakpoint-sm)
+    flex-direction: row
+.modify-left
+  text-align: end
+  @media (max-width: $breakpoint-sm)
+    text-align: start
+.whywe
+  @include adaptivPadding($pcSize: 180, $mobSize: 45, $mode: 3)
+
+  &__header-wrap
+    display: flex
+    gap: 15px
+    svg
+      @media (max-width: $breakpoint-sm)
+        height: 26px
+  &__header
+    @include adaptivPadding($pcSize: 20, $mobSize: 10, $mode: 3)
+.whywe
+  .container
+    overflow: hidden
+.whywe__subheader
+  margin-top: 10px
+  line-height: 120%
+  font-size: 22px
+  max-width: 570px
+
+.whywe__img-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  min-width: 800px
+  transform: translateX(0px)
+  @include adaptivPadding($pcSize: 30, $mobSize: 10, $mode: 1)
+  @include adaptivPadding($pcSize: 30, $mobSize: 10, $mode: 3)
+  @media (max-width: $breakpoint-sm)
+    transform: translateX(-20px)
+  img
+    max-width: 100%
+    max-height: 100%
+
+.whywe__work
+  font-size: 111px
+  line-height: 120%
+  text-transform: uppercase
+  @media (max-width: $breakpoint-lg)
+    font-size: 54px
+  @media (max-width: $breakpoint-sm)
+    font-size: 24px
+
+.whywe__text-botton
+  font-size: 90px
+  line-height: 120%
+  text-transform: uppercase
+  @media (max-width: $breakpoint-lg)
+    font-size: 54px
+  @media (max-width: $breakpoint-sm)
+    font-size: 24px

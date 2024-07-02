@@ -1,0 +1,117 @@
+
+$burgerColor: white
+$burgerActiveColor: white
+
+$headerBackgroundColorBurger: black
+
+$headerBackgroundColor: hsl(0, 0%, 0%)
+$headerHeight: 5rem
+$headerHeight-small: 3.5rem
+
+.header
+  position: relative
+  background-color: $headerBackgroundColor
+  z-index: 100
+
+.header__menu
+  position: relative
+  height: $headerHeight-small
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.header__menu-logo
+
+.header__menu-toggle,
+.header__menu-close
+  display: flex
+  font-size: 1.5rem
+  cursor: pointer
+  height: 24px
+
+.header__menu-toggle
+  svg
+    path
+      color: $burgerActiveColor
+.header__menu-close
+  svg
+    path
+      color: $burgerColor
+
+.header__list
+  display: flex
+  flex-direction: column
+  row-gap: 3rem
+
+  a
+    position: relative
+    color: $burgerColor
+    font-size: var(--text-lg1)
+    font-weight: 500
+    display: inline-flex
+    align-items: center
+    transition: opacity 0.4s
+
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      bottom: -6px
+      width: 0
+      height: 2px
+      background-color: $burgerColor
+      transition: width 0.4s ease-out
+
+    &:hover:after
+      width: 100%
+.header__list:has(a:hover) a:not(:hover)
+  opacity: 0.4
+
+.header__menu-close
+  position: absolute
+  top: 1rem
+  right: 1.5rem
+
+// Menuigation for mobile devices
+@media screen and (max-width: 1150px)
+  .header__inner
+    position: fixed
+    left: -100%
+    top: 0
+    background-color: $headerBackgroundColorBurger
+    width: 100%
+    height: 100%
+    padding: 6rem 3.5rem 4.5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition: left 0.4s
+    a
+      font-size: var(--text-h2)
+.show-menu
+  left: 0
+
+.show-menu li
+  visibility: visible
+  transform: translateX(0)
+
+@media screen and (min-width: 1150px)
+  .header
+    .container
+      margin-inline: auto
+
+  .header__menu
+    height: $headerHeight
+
+    &-toggle,
+    &-close
+      display: none
+
+  .header__list
+    flex-direction: row
+    column-gap: 3.5rem
+
+  .header__inner
+    display: flex
+    align-items: center
+    column-gap: 3.5rem

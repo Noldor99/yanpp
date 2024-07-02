@@ -1,0 +1,183 @@
+/*=============== myhome ===============*/
+ 
+      {
+        "key": "field_myhome0dcf5dea",
+        "label": "MYHOME",
+        "type": "tab"
+      }
+
+
+      
+      <?php the_field('myhome__title'); ?>         
+      <?php the_field('myhome__subtitle'); ?>
+
+      <source type="image/webp" srcset="<?php the_field('myhome__img-webp') ?>" />
+      <img src="<?php the_field('myhome__img') ?>" alt="Image myhome" loading="lazy" />
+
+
+"type": "wysiwyg",
+"tabs": "text",
+"toolbar": "full"
+
+      {
+        "key": "field_myhomedc9f5de9",
+        "label": "Головний заголовок",
+        "name": "myhome__title",
+        "type": "text",
+        "instructions": "Ведіть заголовок",
+        "default_value": "WHAT WE DO"
+      },
+      {
+        "key": "field_myhome0dc9f5de9",
+        "label": "Опис заголовку",
+        "name": "myhome__subtitle",
+        "type": "textarea",
+        "instructions": "Ведіть опис заголовка",
+        "default_value": "Managed by a team",
+        "new_lines": "br"
+      },
+      {
+        "key": "field_myhome3665a320c",
+        "label": "Завантажити зображення",
+        "name": "myhome__img",
+        "type": "image",
+        "instructions": "Рекомендуємий розмір 445*466",
+        "wrapper": {
+          "width": "50"
+        },
+        "return_format": "url"
+      },
+      {
+        "key": "field_myhome3665a320cw",
+        "label": "Завантажити зображення в форматі webp",
+        "name": "myhome__img-webp",
+        "type": "image",
+        "instructions": "Рекомендуємий розмір 445*466",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "50"
+        },
+        "return_format": "url"
+      }
+
+/*=============== ourproduct ===============*/
+"type": "wysiwyg",
+
+      <?php the_field('ourproduct__header'); ?>
+      <?php the_field('ourproduct__subheader'); ?> 
+
+      {
+        "key": "field_ourproduct01cf5dea",
+        "label": "OURPRODUCT",
+        "type": "tab"
+      },
+      {
+        "key": "field_ourproductdc9f5de9",
+        "label": "Наша продукция",
+        "name": "ourproduct__header",
+        "type": "text",
+        "instructions": "Ведіть заголовок",
+        "default_value": "WHAT WE DO"
+      }
+
+
+/*=============== aboutus ===============*/
+"type": "wysiwyg",
+
+      <?php the_field('aboutus__header'); ?>
+
+      {
+        "key": "field_aboutus01cf5dea",
+        "label": "ABOUTUS",
+        "type": "tab"
+      },
+      {
+        "key": "field_aboutusdc9f5de9",
+        "label": "Головний заголовок",
+        "name": "aboutus__header",
+        "type": "text",
+        "instructions": "Ведіть заголовок",
+        "default_value": "WHAT WE DO"
+      }
+
+      <?php the_field('aboutus__title'); ?>         
+      <?php the_field('aboutus__subtitle'); ?>
+
+      <source type="image/webp" srcset="<?php the_field('aboutus__img-webp') ?>" />
+      <img src="<?php the_field('aboutus__img') ?>" alt="Image aboutus" loading="lazy" />
+
+
+"type": "wysiwyg",
+"tabs": "text",
+"toolbar": "full"
+
+      {
+        "key": "field_aboutusdc9f5de9",
+        "label": "Головний заголовок",
+        "name": "aboutus__title",
+        "type": "text",
+        "instructions": "Ведіть заголовок",
+        "default_value": "WHAT WE DO"
+      },
+      {
+        "key": "field_aboutus0dc9f5de9",
+        "label": "Опис заголовку",
+        "name": "aboutus__subtitle",
+        "type": "textarea",
+        "instructions": "Ведіть опис заголовка",
+        "default_value": "Managed by a team",
+        "new_lines": "br"
+      },
+      {
+        "key": "field_aboutus3665a320c",
+        "label": "Завантажити зображення",
+        "name": "aboutus__img",
+        "type": "image",
+        "instructions": "Рекомендуємий розмір 445*466",
+        "wrapper": {
+          "width": "50"
+        },
+        "return_format": "url"
+      },
+      {
+        "key": "field_aboutus3665a320cw",
+        "label": "Завантажити зображення в форматі webp",
+        "name": "aboutus__img-webp",
+        "type": "image",
+        "instructions": "Рекомендуємий розмір 445*466",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "50"
+        },
+        "return_format": "url"
+      }
+
+/*=============== variant ===============*/
+ 
+      {
+        "key": "field_variant0dcf5dea",
+        "label": "VARIANT",
+        "type": "tab"
+      }
+
+
+/*=============== whywe ===============*/
+"type": "wysiwyg",
+
+      <?php the_field('whywe__header'); ?>
+
+      {
+        "key": "field_whywe01cf5dea",
+        "label": "WHYWE",
+        "type": "tab"
+      },
+      {
+        "key": "field_whywedc9f5de9",
+        "label": "Головний заголовок",
+        "name": "whywe__header",
+        "type": "text",
+        "instructions": "Ведіть заголовок",
+        "default_value": "WHAT WE DO"
+      }
