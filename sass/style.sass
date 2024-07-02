@@ -53,6 +53,7 @@
   width: 38%
   margin-left: auto
   @media (max-width: $breakpoint-sm)
+    overflow: hidden
     width: 100%
 
 .myhome__image-absolute
@@ -60,11 +61,12 @@
   left: -6px
   top: 0
   @media (max-width: $breakpoint-sm)
-    width: 350px
+    width: 500px
 
 .myhome__image-wrap
   img
-    height: 300px
+    @media (max-width: $breakpoint-sm)
+      height: 300px
 
 .myhome-swiper
   transform: translateY(30px)

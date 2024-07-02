@@ -406,6 +406,7 @@ body main {
 }
 @media (max-width: 600px) {
   .myhome__right {
+    overflow: hidden;
     width: 100%;
   }
 }
@@ -417,12 +418,14 @@ body main {
 }
 @media (max-width: 600px) {
   .myhome__image-absolute {
-    width: 350px;
+    width: 500px;
   }
 }
 
-.myhome__image-wrap img {
-  height: 300px;
+@media (max-width: 600px) {
+  .myhome__image-wrap img {
+    height: 300px;
+  }
 }
 
 .myhome-swiper {
